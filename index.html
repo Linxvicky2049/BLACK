@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Hub Africa | The Pro Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-cyan: #06b6d4;
+            --neon-purple: #a855f7;
+            --neon-orange: #f97316;
+            --obsidian: #020617;
+            --glass-bg: rgba(15, 23, 42, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--obsidian);
+            color: #f8fafc;
+            overflow: hidden;
+            background-image: 
+                radial-gradient(circle at 0% 0%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.15) 0%, transparent 40%);
+        }
+
+        .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* Glass Morphism */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-bright {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Neon & Afro-Futuristic Elements */
+        .neon-border-cyan {
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.3), inset 0 0 15px rgba(6, 182, 212, 0.1);
+        }
+
+        .neon-text-cyan {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+        }
+
+        .afro-pattern-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a855f7' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hologram-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hologram-card::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 45%,
+                rgba(255, 255, 255, 0.05) 50%,
+                transparent 55%
+            );
+            animation: hologram-shine 6s infinite linear;
+            pointer-events: none;
+        }
+
+        @keyframes hologram-shine {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Floating UI */
+        .float {
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Transitions */
+        .section-transition-enter {
+            opacity: 0;
+            transform: scale(0.98) translateY(10px);
+        }
+        .section-transition-enter-active {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            transition: opacity 400ms, transform 400ms;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--neon-cyan);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+  }
+}
+</script>
+</head>
+<body class="afro-pattern-bg">
+    <div id="root"></div>
+</body>
+</html>

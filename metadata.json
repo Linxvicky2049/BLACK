@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Copy of Copy of Copy of Gaming Hub Africa",
+  "description": "The ultimate ecosystem for the Nigerian and African gaming community. Connect, compete, and grow with localized payments, tournaments, and exclusive content.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
